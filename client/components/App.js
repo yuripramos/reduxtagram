@@ -4,7 +4,7 @@ import * as actionCreators from '../actions/actionsCreators';
 import Main from './Main';
 
 const mapStateToProps = (state) => {
-  console.log('mapStateToProps', state);
+  // console.log('mapStateToProps', state);
   return {
     posts: state.posts,
     comments: state.comments,
