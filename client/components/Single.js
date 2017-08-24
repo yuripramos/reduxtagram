@@ -1,11 +1,19 @@
 import React from 'react';
+import Photo from './Photo';
 
-const Single = () =>{
+const Single = (props) =>{
+  const i = props.posts.findIndex((post) => {
     return (
-      <div className="single-photo">
-      I'm the single
-      </div>
+      post.code === props.params.postId
     )
-  };
+  });
+  const post = props.posts[i];
+  console.log(post);
+  return (
+    <div className="single-photo">
+      im the single
+    </div>
+  )
+};
 
 export default Single;
