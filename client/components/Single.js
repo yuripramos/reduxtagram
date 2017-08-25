@@ -1,5 +1,6 @@
 import React from 'react';
 import Photo from './Photo';
+import Comments from './Comments';
 
 const Single = (props) =>{
   const i = props.posts.findIndex((post) => {
@@ -8,10 +9,10 @@ const Single = (props) =>{
     )
   });
   const post = props.posts[i];
-  console.log(post);
   return (
     <div className="single-photo">
-      im the single
+      <Photo i={i} keyId={i} post={post} {...props} />
+      <Comments />
     </div>
   )
 };
