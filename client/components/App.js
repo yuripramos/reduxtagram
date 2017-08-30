@@ -9,11 +9,11 @@ const mapStateToProps = (state) => {
     posts: state.posts,
     comments: state.comments,
   }
-}
+}//store to props
 
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators(actionCreators, dispatch);
-}
+} //actions to props
 
 const App = connect(mapStateToProps, mapDispatchToProps)(Main);
 
